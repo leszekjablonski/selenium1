@@ -14,16 +14,22 @@ public class Init {
 		 	System.setProperty("webdriver.gecko.driver", "D:\\geckodriver.exe");
 	        
 	        DesiredCapabilities cap = DesiredCapabilities.firefox();
+	        if (driver == null) {
+	        	driver = new FirefoxDriver(cap);
+		        driver.get("http://newtours.demoaut.com");
+		        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		        driver.manage().window().maximize();
+		        return driver;
+	        } else {
+	        	return driver;
+	        }
 	        
-	        driver = new FirefoxDriver(cap);
-	        driver.get("http://newtours.demoaut.com");
-	        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-	        driver.manage().window().maximize();
-			return driver;
+			
 	}
 	
 	public static void endTest() {
 		driver.quit();
+		driver = null;
 	}
 	
 	public static void sleep (int seconds) {

@@ -39,7 +39,7 @@ public class LoginTest {
         Init.sleep(1);
 		
 	}
-	
+	@Ignore
 	@Test
 	public void reservation() {
 		driver.findElement(By.linkText("SIGN-ON")).click();
@@ -63,9 +63,7 @@ public class LoginTest {
 		driver.findElement(By.xpath("/html/body/div[1]/table/tbody/tr/td[2]"
 				+ "/table/tbody/tr[4]/td/table/tbody/tr/td[2]/table/tbody/tr[5]"
 				+ "/td/form/p/input")).click();
-		driver.findElement(By.xpath("/html/body/div[1]/table/tbody/tr/td[2]"
-				+ "/table/tbody/tr[4]/td/table/tbody/tr/td[2]/table/tbody/tr[5]"
-				+ "/td/form/table/tbody/tr[23]/td/input")).click();
+		driver.findElement(By.name("buyFlights")).click();
 		
 		Init.sleep(2);
 	}
