@@ -7,6 +7,7 @@ import org.openqa.selenium.WebDriver;
 
 import pl.lait.pageObject.LoginPage;
 import pl.lait.pageObject.Reservation2Page;
+import pl.lait.pageObject.Reservation3Page;
 import pl.lait.pageObject.ReservationPage;
 
 public class Login2Test {
@@ -29,6 +30,9 @@ public class Login2Test {
 		
 		Reservation2Page reserv2Page = new Reservation2Page();
 		reserv2Page.chooseFlights();
+		
+		Reservation3Page reserv3Page = new Reservation3Page();
+		reserv3Page.fillTheReservation3Page();
 	}
 	
 	@After
