@@ -147,5 +147,9 @@ public class Reservation3Page {
 		driver.switchTo().alert().accept();
 		securePurchaseBtn.click();
 		Init.sleep(2);
+//		Iterator<String> iterator = handles.iterator();
+//        while (iterator.hasNext()){
+//            subWindowHandler = iterator.next();
+//        }
 	}
 }

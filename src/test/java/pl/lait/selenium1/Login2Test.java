@@ -2,6 +2,7 @@ package pl.lait.selenium1;
 
 import org.junit.After;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 
@@ -9,7 +10,7 @@ import pl.lait.pageObject.LoginPage;
 import pl.lait.pageObject.Reservation2Page;
 import pl.lait.pageObject.Reservation3Page;
 import pl.lait.pageObject.ReservationPage;
-
+@Ignore
 public class Login2Test {
 	
 	WebDriver driver;
