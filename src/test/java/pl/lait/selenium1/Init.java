@@ -12,7 +12,7 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 public class Init {
 
 	static WebDriver driver = null;
-	
+	//komentarz nieistotny dla Jenkinsa
 	public static WebDriver getDriver() {
 		 	System.setProperty("webdriver.gecko.driver", "D:\\geckodriver.exe");
 		 	URL url = null;
@@ -29,7 +29,7 @@ public class Init {
 	        	driver = new RemoteWebDriver (url, cap);
 		        driver.get("http://newtours.demoaut.com");
 		        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		        driver.manage().window().maximize();
+		        //driver.manage().window().maximize();
 		        return driver;
 	        } else {
 	        	return driver;
